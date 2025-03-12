@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "KS Templates",
+  "version": "1.0",
+  "description": "Save and insert email templates with keyboard shortcuts.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "clipboardRead",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://outlook.live.com/*",
+    "https://outlook.office.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+    "matches": [
+      "https://mail.google.com/*",
+      "https://outlook.live.com/*",
+      "https://outlook.office.com/*"
+    ],
+    "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+    "16": "icons/icon16.png",
+    "36": "icons/icon36.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+    }
+  },
+"commands": {
+  "open-popup": {
+    "suggested_key": {
+      "default": "Ctrl+Shift+E",
+      "windows": "Ctrl+Shift+E",
+      "mac": "Command+Shift+E",
+      "chromeos": "Ctrl+Shift+E",
+      "linux": "Ctrl+Shift+E"
+    },
+    "description": "Open the KS Templates popup"
+  }
+}
+}
