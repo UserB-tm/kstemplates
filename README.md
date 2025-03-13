@@ -1,4 +1,6 @@
 # kstemplates
+![ksLogo](https://github.com/user-attachments/assets/7c6e71b3-e2fb-43e0-b5df-1b5ba88abb58)
+
 Browser extension to save and paste email templates locally with shortcuts and indexedDB
 
 This is my first attempt at a browser extension, so it may have some bugs. I've tested it in Chrome and Edge. 
